@@ -1,194 +1,138 @@
-/* css Zen Garden default style v1.02 */
-/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
-
-/* This file based on 'Tranquille' by Dave Shea */
-/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
-/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
-
-/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
-
-
-/* basic elements */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 html {
-	margin: 0;
-	padding: 0;
-	}
-body { 
-	font: 75% georgia, sans-serif;
-	line-height: 1.88889;
-	color: #555753; 
-	background: #fff url(blossoms.jpg) no-repeat bottom right; 
-	margin: 0; 
-	padding: 0;
-	}
-p { 
-	margin-top: 0; 
-	text-align: justify;
-	}
-h3 { 
-	font: italic normal 1.4em georgia, sans-serif;
-	letter-spacing: 1px; 
-	margin-bottom: 0; 
-	color: #7D775C;
-	}
-a:link { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #B7A5DF;
-	}
-a:visited { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #D4CDDC;
-	}
-a:hover, a:focus, a:active { 
-	text-decoration: underline; 
-	color: #9685BA;
-	}
-abbr {
-	border-bottom: none;
-	}
-
-
-/* specific divs */
-.page-wrapper { 
-	background: url(zen-bg.jpg) no-repeat top left; 
-	padding: 0 175px 0 110px;  
-	margin: 0; 
-	position: relative;
-	}
-
-.intro { 
-	min-width: 470px;
-	width: 100%;
-	}
-
-header h1 { 
-	background: transparent url(h1.gif) no-repeat top left;
-	margin-top: 10px;
-	display: block;
-	width: 219px;
-	height: 87px;
-	float: left;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-header h2 { 
-	background: transparent url(h2.gif) no-repeat top left; 
-	margin-top: 58px; 
-	margin-bottom: 40px; 
-	width: 200px; 
-	height: 18px; 
-	float: right;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-header {
-	padding-top: 20px;
-	height: 87px;
+  padding: 0;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+  margin: 0px;
+	background-color:lightgray;
+}
+a:link {
+    color: darkslategray;
 }
 
-.summary {
-	clear: both; 
-	margin: 20px 20px 20px 10px; 
-	width: 160px; 
-	float: left;
-	}
-.summary p {
-	font: italic 1.1em/2.2 georgia; 
-	text-align: center;
-	}
+a:visited {
+    color: rgb(89,89,89);
+}
 
-.preamble {
-	clear: right; 
-	padding: 0px 10px 0 10px;
-	}
-.supporting {	
-	padding-left: 10px; 
-	margin-bottom: 40px;
-	}
+a:hover {
+    color: black;
+}
+ header {
+	 background-image: url('spaphoto.jpg');
+   min-height: 500px;
+   background-repeat: no-repeat;
+   background-position: 0 0;
+	 background-size: cover;
+}
+header:hover {
+	background-image: url('SpaPhoto2.jpg');
+	transition: 2s background-image;
+}
+h1, h2 {
+  font-size:30px;
+	color: darkslategray;
+	position: relative;
+	display:inline;	
+	top: 400px;
+	left: 330px;
+}
+h2 {
+	padding-left:200px;
+}
+h3 {
+  color:darkslategray;
+}
 
-footer { 
-	text-align: center; 
-	}
-footer a:link, footer a:visited { 
-	margin-right: 20px; 
-	}
+div.summary, 
+div.preamble,
+.supporting div {
+	float:left;
+	width: 66%;
+	margin-left:30px;
+}
+div.preamble,
+.supporting div {
+	background-image:url('rocks.jpg');
+	background-repeat:no-repeat;
+	background-position:20px 20px;
+	background-size: 50px 50px;
+	padding-left:10%;
+	width: 56%;
+}
 
-.sidebar {
-	margin-left: 600px; 
-	position: absolute; 
-	top: 0; 
-	right: 0;
-	}
-.sidebar .wrapper { 
-	font: 10px verdana, sans-serif; 
-	background: transparent url(paper-bg.jpg) top left repeat-y; 
-	padding: 10px; 
-	margin-top: 150px; 
-	width: 130px; 
-	}
-.sidebar h3.select { 
-	background: transparent url(h3.gif) no-repeat top left; 
-	margin: 10px 0 5px 0; 
-	width: 97px; 
-	height: 16px; 
+div.summary {
+	border-bottom: 2px solid gray;
+}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.archives { 
-	background: transparent url(h5.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:57px; 
-	height: 14px; 
+.supporting div:last-of-type {
+	border-bottom: 2px solid gray;
+}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.resources { 
-	background: transparent url(h6.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:63px; 
-	height: 10px; 
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-
-
-.sidebar ul {
-	margin: 0;
-	padding: 0;
-	}
-.sidebar li {
-	line-height: 1.3em; 
-	background: transparent url(cr1.gif) no-repeat top center; 
-	display: block; 
-	padding-top: 5px; 
-	margin-bottom: 5px;
+div.requirements p:last-child {
+    position: absolute;
+    right: 5%;
+    width: 20%;
+    font-style: italic;
+    margin-top: -170px;
+}
+aside {
+	margin-top: 50px;
+	position: absolute;
+	right: 2%;
+  float: right;
+	width:23%;
+  border: 2px solid gray;
+  padding: 1.5rem;
+	background-color:darkgray;
+}
+aside h3 {
+text-align:center;
+}
+aside li {
 	list-style-type: none;
-	}
-.sidebar li a:link {
-	color: #988F5E;
-	}
-.sidebar li a:visited {
-	color: #B3AE94;
-	}
+	padding: 1rem;
+}
+div.design-selection ul {
+	padding: 0 2rem 1rem 2rem;
+}
+div.design-archives li {
+	display: block;
+}
+div.design-archives h3 {
+	display:none;
+}
+div.design-archives ul {
+	padding: 2rem;
+	margin: 20px;
+	border-top-style:solid;
+	border-bottom-style:solid;
+}
 
+div.zen-resources h3 {
+	display:none;
+}
+div.zen-resources {
+	background-image: url(lilypadcropped.jpg);
+	background-repeat: no-repeat;
+	background-size: 100px 100px;
+	background-position: 100px 50px;
+}
+div.zen-resources ul {
+	padding-top: 200px;
+}
 
-.extra1 {
-	background: transparent url(cr2.gif) top left no-repeat; 
-	position: absolute; 
-	top: 40px; 
-	right: 0; 
-	width: 148px; 
-	height: 110px;
-	}
+footer {
+	width:100%;
+	float:left;
+	background-image: url('lilypad.jpg');
+	background-position-y:110px;
+	min-height: 500px;
+  background-repeat: no-repeat;
+	background-size: cover;
+	padding-top:45px;
+}
+footer a {
+	margin: 60px;
+	padding: 15px;
+}
